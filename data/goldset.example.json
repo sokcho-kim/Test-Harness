@@ -1,0 +1,28 @@
+{
+  "description": "검증용 Q&A 셋 예시",
+  "test_cases": [
+    {
+      "id": "tc_001",
+      "name": "기본 질문 테스트",
+      "input": {
+        "question": "대한민국의 수도는 어디인가요?"
+      },
+      "expected_output": "서울",
+      "assertions": [
+        {"type": "contains", "value": "서울"},
+        {"type": "not-contains", "value": "<thinking>"}
+      ]
+    },
+    {
+      "id": "tc_002",
+      "name": "JSON 출력 테스트",
+      "input": {
+        "question": "1 + 1은?"
+      },
+      "assertions": [
+        {"type": "is-json"},
+        {"type": "contains", "value": "answer"}
+      ]
+    }
+  ]
+}

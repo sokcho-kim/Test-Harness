@@ -1,0 +1,41 @@
+# LLM 모델 설정
+
+models:
+  # Together AI 모델
+  - id: together-llama-3.1-70b
+    name: Llama 3.1 70B (Together)
+    provider: together
+    endpoint: https://api.together.xyz/v1
+    api_key_env: TOGETHER_API_KEY
+    default_params:
+      temperature: 0.7
+      max_tokens: 1024
+
+  - id: together-qwen-72b
+    name: Qwen 2.5 72B (Together)
+    provider: together
+    endpoint: https://api.together.xyz/v1
+    api_key_env: TOGETHER_API_KEY
+    default_params:
+      temperature: 0.7
+      max_tokens: 1024
+
+  # OpenAI 모델
+  - id: openai-gpt-4o
+    name: GPT-4o (OpenAI)
+    provider: openai
+    endpoint: https://api.openai.com/v1
+    api_key_env: OPENAI_API_KEY
+    default_params:
+      temperature: 0.7
+      max_tokens: 1024
+
+  # 사내 모델
+  - id: internal-vllm
+    name: 사내 vLLM 서버
+    provider: vllm
+    endpoint: ${INTERNAL_LLM_ENDPOINT}
+    api_key_env: INTERNAL_LLM_API_KEY
+    default_params:
+      temperature: 0.7
+      max_tokens: 1024
