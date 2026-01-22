@@ -1,3 +1,3 @@
-from . import tests, prompts, evaluations, websocket
+from . import tests, prompts, datasets, evaluations, websocket
 
-__all__ = ["tests", "prompts", "evaluations", "websocket"]
+__all__ = ["tests", "prompts", "datasets", "evaluations", "websocket"]

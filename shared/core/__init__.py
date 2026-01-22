@@ -9,8 +9,11 @@ from .models import (
     TestResult,
     EvaluationSummary,
 )
+from .mapping import MappingResolver, MappingValidationResult, PromptVariableExtractor, AssertionMerger
+from .promptfoo_runner import PromptfooRunner
 
 __all__ = [
+    # Models
     "Assertion",
     "AssertionType",
     "AssertionResult",
@@ -20,4 +23,11 @@ __all__ = [
     "TestRun",
     "TestResult",
     "EvaluationSummary",
+    # Mapping
+    "MappingResolver",
+    "MappingValidationResult",
+    "PromptVariableExtractor",
+    "AssertionMerger",
+    # Runner
+    "PromptfooRunner",
 ]

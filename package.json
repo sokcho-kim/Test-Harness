@@ -1,0 +1,28 @@
+{
+  "name": "test-harness",
+  "version": "1.0.0",
+  "description": "LLM 프롬프트 최적화 및 워크플로우 검증을 위한 통합 테스트베드",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "promptfoo": "promptfoo",
+    "eval": "promptfoo eval",
+    "eval:view": "promptfoo view"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sokcho-kim/Test-Harness.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sokcho-kim/Test-Harness/issues"
+  },
+  "homepage": "https://github.com/sokcho-kim/Test-Harness#readme",
+  "devDependencies": {
+    "promptfoo": "^0.120.16"
+  }
+}
