@@ -18,7 +18,12 @@
       "Bash(find:*)",
       "Bash(PYTHONPATH=\"services/api/src:.\" timeout 10 python:*)",
       "Bash(netstat:*)",
-      "Bash(powershell -Command:*)"
+      "Bash(powershell -Command:*)",
+      "Bash(tree:*)",
+      "Bash(pip show:*)",
+      "Bash(PYTHONPATH=/c/Jimin/Test-Harness/shared:/c/Jimin/Test-Harness/services/api/src python:*)",
+      "Bash(npm run dev:*)",
+      "Bash(head:*)"
     ]
   }
 }
