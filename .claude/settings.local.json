@@ -23,7 +23,10 @@
       "Bash(pip show:*)",
       "Bash(PYTHONPATH=/c/Jimin/Test-Harness/shared:/c/Jimin/Test-Harness/services/api/src python:*)",
       "Bash(npm run dev:*)",
-      "Bash(head:*)"
+      "Bash(head:*)",
+      "Bash(docker:*)",
+      "Bash(docker-compose:*)",
+      "Bash(PYTHONPATH=/c/Jimin/Test-Harness python -m uvicorn:*)"
     ]
   }
 }
