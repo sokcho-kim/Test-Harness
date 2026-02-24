@@ -1,0 +1,16 @@
+{
+  "prompt_a": {
+    "total": 0,
+    "leaked": 0,
+    "json_valid": 0,
+    "latencies": [],
+    "leaked_vars": {}
+  },
+  "prompt_b": {
+    "total": 0,
+    "leaked": 0,
+    "json_valid": 0,
+    "latencies": [],
+    "leaked_vars": {}
+  }
+}
