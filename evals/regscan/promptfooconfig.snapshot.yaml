@@ -1,0 +1,26 @@
+description: "RegScan Snapshot Quality Comparison (pre vs post price-spectrum)"
+
+providers:
+  - id: "file://providers/snapshot_provider.js"
+    label: "pre-price-spectrum (v4)"
+    config:
+      snapshotDir: "C:/Jimin/RegScan/output/briefings/snapshots/2026-02-25_v4"
+      label: "pre-price-spectrum"
+  - id: "file://providers/snapshot_provider.js"
+    label: "post-price-spectrum (current)"
+    config:
+      snapshotDir: "C:/Jimin/RegScan/output/briefings"
+      label: "post-price-spectrum"
+
+prompts:
+  - "file://prompts/v4.0.js"
+
+tests: "file://datasets/drug_samples.json"
+
+defaultTest:
+  assert:
+    - type: is-json
+    - type: javascript
+      value: "file://assertions/regscan_quality.js"
+
+outputPath: "outputs/snapshot_compare.json"

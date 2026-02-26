@@ -33,6 +33,9 @@ const LEAKED_VARS = [
 // -- 한계점 키워드 --
 const LIMITATION_KEYWORDS = ["다만", "한계", "CI", "p-value", "p=", "유의성", "95%"];
 
+// -- 가격 스펙트럼 참조 키워드 --
+const PRICE_SPECTRUM_KEYWORDS = ["중앙값", "p50", "p90", "상위 10%", "스펙트럼", "백분위"];
+
 // -- 섹션 글자수 범위 (경험적 기준) --
 const SECTION_LENGTH = {
   headline:              { min: 10, max: 50 },
@@ -187,6 +190,20 @@ module.exports = (output, context) => {
         : field + " bullet FAIL",
     });
   }
+
+  // 11) 가격 스펙트럼 참조 여부 (domestic/medclaim 텍스트)
+  const priceTarget = [
+    parsed.domestic_insight_text || "",
+    parsed.medclaim_action_text || "",
+  ].join(" ");
+  const spectrumFound = PRICE_SPECTRUM_KEYWORDS.filter(kw => priceTarget.includes(kw));
+  components.push({
+    pass: spectrumFound.length > 0,
+    score: Math.min(spectrumFound.length / 2, 1),
+    reason: spectrumFound.length
+      ? "price-spectrum-ref OK (" + spectrumFound.join(", ") + ")"
+      : "price-spectrum-ref FAIL (no spectrum keywords in domestic/medclaim)",
+  });
 
   // 집계
   const totalChecks = components.length;
