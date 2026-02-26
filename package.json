@@ -9,7 +9,9 @@
   "scripts": {
     "promptfoo": "promptfoo",
     "eval": "promptfoo eval",
-    "eval:view": "promptfoo view"
+    "eval:view": "promptfoo view",
+    "eval:regscan": "cd evals/regscan && promptfoo eval",
+    "eval:regscan:view": "cd evals/regscan && promptfoo view"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,6 @@
   },
   "homepage": "https://github.com/sokcho-kim/Test-Harness#readme",
   "devDependencies": {
-    "promptfoo": "^0.120.16"
+    "promptfoo": "^0.120.25"
   }
 }

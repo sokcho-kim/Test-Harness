@@ -1,0 +1,12 @@
+{
+  "v4.0": {
+    "version": "v4.0",
+    "extracted_at": "2026-02-26T01:31:19.875679+00:00",
+    "regscan_commit": "a8575b9",
+    "prompt_hash": "46131b8b956b38a3",
+    "system_hash": "b7a2de5162b2b62b",
+    "user_hash": "1d9aee3a56a960a0",
+    "system_file": "v4.0_system.txt",
+    "user_file": "v4.0_user.txt"
+  }
+}

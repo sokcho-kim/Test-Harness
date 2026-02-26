@@ -59,6 +59,9 @@ cache/
 output/
 *.output.json
 
+# promptfoo eval outputs (Git 추적: evals/*/outputs/ 만 커밋)
+.promptfoo/
+
 # OS
 .DS_Store
 Thumbs.db

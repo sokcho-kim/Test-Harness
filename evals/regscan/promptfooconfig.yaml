@@ -1,0 +1,20 @@
+description: "RegScan V4 Article Quality Evaluation"
+
+providers:
+  - id: openai:gpt-4.1
+    config:
+      temperature: 0.7
+      max_tokens: 4096
+
+prompts:
+  - "file://prompts/v4.0.js"
+
+tests: "file://datasets/drug_samples.json"
+
+defaultTest:
+  assert:
+    - type: is-json
+    - type: javascript
+      value: "file://assertions/regscan_quality.js"
+
+outputPath: "outputs/eval_latest.json"
