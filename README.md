@@ -65,7 +65,15 @@ test-harness/
 
 ## 시작하기
 
-### 1. 환경 변수 설정
+### 1. Git Hooks 설정
+
+```bash
+git config core.hooksPath .githooks
+```
+
+커밋 시 API 키, 시크릿 유출을 자동 차단하는 pre-commit hook이 활성화됩니다.
+
+### 2. 환경 변수 설정
 
 ```bash
 cp .env.example .env
@@ -78,7 +86,7 @@ OPENAI_API_KEY=your_openai_api_key
 ANTHROPIC_API_KEY=your_anthropic_api_key
 ```
 
-### 2. 실행 방법
+### 3. 실행 방법
 
 #### Docker로 실행 (권장)
 
@@ -113,7 +121,7 @@ npm run dev
 - API Docs (Swagger): http://localhost:8080/docs
 - Web UI: http://localhost:3000
 
-### 3. promptfoo CLI (선택)
+### 4. promptfoo CLI (선택)
 
 ```bash
 npm install          # 루트에서 promptfoo 설치
